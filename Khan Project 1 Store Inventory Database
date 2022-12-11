@@ -1,0 +1,15 @@
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, category TEXT, name TEXT, quantity INTEGER, price INTEGER);
+INSERT INTO inventory VALUES (1, "Jeans", "Skinny Jeans", 10, 65);
+INSERT INTO inventory VALUES (2, "Jeans", "Jeggings", 8, 45); 
+INSERT INTO inventory VALUES (4, "Jeans", "Bootcut Jeans", 10, 65);
+INSERT INTO inventory VALUES (5, "Jeans", "Boyfriend", 12, 55);
+INSERT INTO inventory VALUES (6, "Sweaters", "Cardigan", 15, 65);
+INSERT INTO inventory VALUES (7, "Sweaters", "Pullover", 10, 70);
+INSERT INTO inventory VALUES (8, "Sweaters", "Tunic", 5, 60);
+INSERT INTO inventory VALUES (9, "Shoes", "Sneakers", 10, 70);
+INSERT INTO inventory VALUES (10, "Shoes", "Booties", 16, 75);
+INSERT INTO inventory VALUES (11, "Shoes", "Flats", 10, 65);
+SELECT * FROM inventory;
+SELECT category, name, quantity FROM inventory ORDER BY quantity;
+SELECT * FROM inventory WHERE price >65 ORDER BY price;
+SELECT category, name, SUM(quantity), price FROM inventory GROUP BY price;
